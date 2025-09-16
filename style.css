@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url('./img/fundo.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*height: 100vh;*/
+    /*Acrescentei essa linha*/
+    height: auto !important;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    background-color: #fff;
+    height: 10vh;
+    box-shadow: 0px 2px 1px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* acrescentei essa linha */
+}
+h1{font-size: 26px;}
+h2{font-size: 20px; color: #fff;}
+.area-header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+.area-img{width: 20%;}
+.area-img img{width: 150px}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu ul li{
+    padding: 0 14px;
+}
+.menu ul li a{
+    color: #355092;
+    text-decoration: none;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.area-footer{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.area-footer p{
+    text-align: center;
+    width: 80%;
+    color: #355092;
+}
+
+.banner{
+    /* width: 100%; */
+    /* margin: auto; */
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
+    background-image: url('./img/vacina.png');
+    margin-top: 10px;
+    height: 300px;
+    background-position: left;
+    overflow: hidden;
+}
+.conteudo-banner{
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.conteudo-banner h1{
+    text-shadow: rgba(0,0,0,0.2);
+}
+.container{/*acrescentei para deixar o rodape na parte debaixo da pagina*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+        
+}
+.corpo{/*Acrescentei para deixar o footer na parte de baixo da página*/
+  /* flex-grow: 1;  
+  /* padding: 20px;*/
+  /* margin-top: 25vh; */
+  width: 90%;
+  margin: auto;
+  margin-top: 120px;
+}
+
+.servicos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-servico{
+    width: 23%;
+    background-color: #fff;
+    color: #333;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-servico h2{
+    color: #333;
+}
+.card-image{
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.conteudo-card{
+    height: 60%;
+    padding: 20px;
+    text-align: center;
+}
+
+.botao{
+    border: none;
+    background-color: #355092;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 170px;
+}
+
