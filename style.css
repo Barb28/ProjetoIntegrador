@@ -13,8 +13,6 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    /*height: 100vh;*/
-    /*Acrescentei essa linha*/
     height: auto !important;
 }
 
@@ -32,7 +30,6 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    /* acrescentei essa linha */
 }
 
 h1 {
@@ -97,8 +94,6 @@ footer {
 }
 
 .banner {
-    /* width: 100%; */
-    /* margin: auto; */
     border-radius: 10px;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
     background-image: url('./img/vacina.png');
@@ -124,7 +119,6 @@ footer {
 }
 
 .container {
-    /*acrescentei para deixar o rodape na parte debaixo da pagina*/
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -132,10 +126,6 @@ footer {
 }
 
 .corpo {
-    /*Acrescentei para deixar o footer na parte de baixo da página*/
-    /* flex-grow: 1;  
-  /* padding: 20px;*/
-    /* margin-top: 25vh; */
     width: 80%;
     margin: auto;
     margin-top: 120px;
