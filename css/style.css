@@ -1,11 +1,12 @@
 .banner {
     border-radius: 10px;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
-    background-image: url('./img/vacina.png');
+    background-image: url('../img/vacina.png');
     margin-top: 10px;
     height: 300px;
     background-position: left;
     overflow: hidden;
+    background-size: cover;
 }
 
 .conteudo-banner {
@@ -108,5 +109,30 @@
 .italico {
     font-style: italic;
     color: #333;
+}
+
+@media only screen and (max-width: 425px){
+    .banner{
+        height: 250px;
+    }
+
+    .botao{
+        width: 100px;
+    }
+
+    .conteudo-secao {
+        /*para fazer a rolagem lateral*/
+        overflow-x: auto;                
+        scroll-snap-type: x mandatory;   
+        gap: 20px;                       
+        padding: 10px 0;
+    }
+
+    .card-servico {
+        /*para fazer a rolagem lateral*/
+        flex: 0 0 80%;                  
+        max-width: 80%;
+        scroll-snap-align: start;
+    }
 }
 

@@ -9,7 +9,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url('./img/fundo.png');
+    background-image: url('../img/fundo.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -115,8 +115,9 @@ footer {
 }
 
 @media only screen and (max-width: 425px){
-    /* *{font-size: 14px;} */
-
+    *{font-size: 14px;}
+    h1{font-size: 20px;}
+    h2{font-size: 16px;}
     .area-header, .area-footer, .corpo{
         width: 90%;
     }
@@ -124,7 +125,6 @@ footer {
         flex-direction: row-reverse;
     }
     .menu{
-        /* display: none; */
         width: 70%;
         height: 100vh;
         
@@ -136,8 +136,8 @@ footer {
         padding: 20px;
         left: 0;
 
-        left: -100%; /* começa fora da tela */
-        transition: left 0.3s ease; /* animação */
+        left: -100%;
+        transition: left 0.3s ease;
         
     }
     .menu ul{
@@ -149,12 +149,11 @@ footer {
         cursor: pointer;
     }
     .menu.ativo {
-        /* display: flex; quando ativo, mostra */
         left: 0;
     }
 
     .menu.ativo #sair {
-        display: block; /* mostra botão fechar dentro do menu */
+        display: block;
         margin-bottom: 20px;
         cursor: pointer;
     }
