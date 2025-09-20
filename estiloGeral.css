@@ -50,10 +50,6 @@ h2 {
     justify-content: space-between;
 }
 
-.area-img {
-    width: 20%;
-}
-
 .area-img img {
     width: 150px
 }
@@ -104,4 +100,62 @@ footer {
     width: 80%;
     margin: auto;
     margin-top: 120px;
+}
+
+.menu{display: flex;}
+.menu-hamburguer, #sair{
+    display: none;
+}
+
+#hamburguer, #sair{
+    font-size: 40px;
+    color: #5149A9;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 425px){
+    /* *{font-size: 14px;} */
+
+    .area-header, .area-footer, .corpo{
+        width: 90%;
+    }
+    .area-header{
+        flex-direction: row-reverse;
+    }
+    .menu{
+        display: none;
+        width: 70%;
+        height: 100vh;
+        
+        z-index: 1001;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        left: 0;
+        
+    }
+    .menu ul{
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .menu-hamburguer{
+        display: block;
+        cursor: pointer;
+    }
+    .menu.ativo {
+        display: flex; /* quando ativo, mostra */
+    }
+
+    .menu.ativo #sair {
+        display: block; /* mostra botão fechar dentro do menu */
+        align-self: flex-end;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .area-img img{
+        width: 120px;
+    }
 }
