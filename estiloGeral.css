@@ -124,7 +124,7 @@ footer {
         flex-direction: row-reverse;
     }
     .menu{
-        display: none;
+        /* display: none; */
         width: 70%;
         height: 100vh;
         
@@ -135,6 +135,9 @@ footer {
         box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
         padding: 20px;
         left: 0;
+
+        left: -100%; /* começa fora da tela */
+        transition: left 0.3s ease; /* animação */
         
     }
     .menu ul{
@@ -146,12 +149,12 @@ footer {
         cursor: pointer;
     }
     .menu.ativo {
-        display: flex; /* quando ativo, mostra */
+        /* display: flex; quando ativo, mostra */
+        left: 0;
     }
 
     .menu.ativo #sair {
         display: block; /* mostra botão fechar dentro do menu */
-        align-self: flex-end;
         margin-bottom: 20px;
         cursor: pointer;
     }
