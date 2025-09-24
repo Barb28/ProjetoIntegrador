@@ -78,25 +78,13 @@ footer {
   color: #355092;
 }
 
-/* .banner{
-    background-color: red;
-    width: 100%;
-    margin: auto;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
-    background-image: url('');
-    margin-top: 10px;
-    color: #fff;
-} */
 .container {
-  /*acrescentei para deixar o rodape na parte debaixo da pagina*/
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .corpo {
-  /*Acrescentei para deixar o footer na parte de baixo da página*/
   flex-grow: 1;
   padding: 20px;
   margin-top: 10vh;
