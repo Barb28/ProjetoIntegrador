@@ -1,48 +1,97 @@
-let ong1 = { nome: "ONG Patinhas que Brilham", lat: -23.955416, lon: -46.345823};
-let ong2 = { nome: "ONG Defesa da Vida Animal", lat: -23.961186202073417, lon: -46.30923364528388};
-let ong3 = { nome: "Instituto Eliseu", lat: -23.95124589382297, lon: -46.3347634590732};
-let ong4 = { nome: "OSCIP SOS Animais de Rua", lat: -23.964307098751306, lon: -46.34104944742831};
-
-let mapa = L.map('mapa').setView([-23.9608, -46.3336], 13);
-
-let limitesSantos = [
-  [-24.05, -46.45], // sudoeste (lat, lon)
-  [-23.85, -46.25]  // nordeste (lat, lon)
+const ongs = [
+  {
+    nome: "ONG Patinhas que Brilham",
+    lat: -23.955416,
+    lon: -46.345823,
+    endereco: "R. Carvalho de Mendonça, 670",
+    foto: "img/logo-patinhasquebrilham.jpg",
+    instagram: "ongpatinhasquebrilham",
+    numero: "(13) 99782-5737",
+    servicos: ["adocao"]
+  },
+  {
+    nome: "ONG Defesa da Vida Animal (DVA)",
+    lat: -23.961186,
+    lon: -46.309234,
+    endereco: "R. Alm. Tamandaré, 136",
+    foto: "img/logo-dva.jpg",
+    instagram: "ongdva",
+    numero: "(13) 3273-3245",
+    servicos: ["medico", "lar", "adocao"]
+  },
+  {
+    nome: "Instituto Eliseu (antiga Viva Bicho)",
+    lat: -23.951246,
+    lon: -46.334763,
+    endereco: "R. João Guerra, 319",
+    foto: "img/logo-institutoeliseu.png",
+    instagram: "institutoeliseu",
+    numero:"(13) 99611-5779",
+    servicos: ["adocao", "medico", "lar"]
+  }
 ];
 
-mapa.setMaxBounds(limitesSantos);
+let mapa = L.map('mapa').setView([-23.9608, -46.3336], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap'
 }).addTo(mapa);
 
-let botao = document.getElementById('botao-de-pesquisa');
-let caixa = document.getElementById('caixa-de-pesquisa');
+mapa.setMaxBounds([
+  [-24.05, -46.45],
+  [-23.85, -46.25]
+]);
 
-botao.onclick = function() {
-  let texto = caixa.value.toLowerCase();
+const caixa = document.getElementById("caixa-de-pesquisa");
+const botao = document.getElementById("botao-de-pesquisa");
+const resultados = document.getElementById("resultados-pesquisa");
 
-  if (texto === "ong patinhas que brilham") {
-    mapa.setView([ong1.lat, ong1.lon], 16);
-    L.marker([ong1.lat, ong1.lon]).addTo(mapa)
-      .bindPopup(ong1.nome).openPopup();
-  } 
-  else if (texto === "ong defesa da vida animal") {
-    mapa.setView([ong2.lat, ong2.lon], 16);
-    L.marker([ong2.lat, ong2.lon]).addTo(mapa)
-      .bindPopup(ong2.nome).openPopup();
-  } 
-  else if (texto === "instituto eliseu") {
-    mapa.setView([ong3.lat, ong3.lon], 16);
-    L.marker([ong3.lat, ong3.lon]).addTo(mapa)
-      .bindPopup(ong3.nome).openPopup();
-  } 
-  else if (texto === "oscip sos animais de rua") {
-    mapa.setView([ong4.lat, ong4.lon], 16);
-    L.marker([ong4.lat, ong4.lon]).addTo(mapa)
-      .bindPopup(ong4.nome).openPopup();
-  } 
-  else {
-    alert("ONG não encontrada!");
+let marcadorAtual = null;
+
+function buscarONG() {
+  const termo = caixa.value.toLowerCase();
+  resultados.innerHTML = "";
+  resultados.style.display = "block";
+
+  const encontrados = ongs.filter(ong => ong.nome.toLowerCase().includes(termo));
+
+  if(encontrados.length === 0) {
+    resultados.innerHTML = "<p>Nenhuma ONG encontrada.</p>";
+    return;
   }
+
+  encontrados.forEach(ong => {
+    const div = document.createElement("div");
+    div.classList.add("ong");
+
+    div.innerHTML = `
+      <img src="${ong.foto}" alt="${ong.nome}">
+      <div class="ong-info">
+        <h3>${ong.nome}</h3>
+        <p>${ong.endereco}</p>
+        <p><i class="fab fa-instagram"></i> @${ong.instagram}</p>
+        <p>${ong.numero}</p>
+        <div class="servicos">
+          ${ong.servicos.includes("adocao") ? '<i class="fa-solid fa-heart"></i>' : ''}
+          ${ong.servicos.includes("lar") ? '<i class="fa-solid fa-house"></i>' : ''}
+          ${ong.servicos.includes("vacina") ? '<i class="fa-solid fa-syringe"></i>' : ''}
+          ${ong.servicos.includes("medico") ? '<i class="fa-solid fa-hospital"></i>' : ''}
+        </div>
+      </div>
+    `;
+
+    resultados.appendChild(div);
+
+    if(marcadorAtual) mapa.removeLayer(marcadorAtual);
+
+    marcadorAtual = L.marker([ong.lat, ong.lon]).addTo(mapa)
+      .bindPopup(ong.nome).openPopup();
+
+    mapa.setView([ong.lat, ong.lon], 16);
+  });
 }
+
+botao.addEventListener("click", buscarONG);
+caixa.addEventListener("keypress", e => {
+  if(e.key === "Enter") buscarONG();
+});

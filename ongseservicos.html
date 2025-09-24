@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONGS e serviços</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleuniversal.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONGS e serviços</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleuniversal.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
-
 <body>
-    <header>
-        <div class="area-header">
-            <div class="area-img">
-                <img src="./img/logotipo.png" alt="Logotipo AniMar">
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html">Adote um pet</a></li>
-                    <li><a href="index.html">Ongs e serviços</a></li>
-                    <li><a href="index.html">Proteção aos animais</a></li>
-                    <li><a href="index.html">Cuidado com seu pet</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="barra-de-pesquisa">
-        <input type="text" id="caixa-de-pesquisa" placeholder="Pesquisar...">
-        <button id="botao-de-pesquisa">🔍</button>
-    </div>
-    <div id="resultados-pesquisa"></div>
-    <div id="mapa"></div>
-    <script src="js/script.js"></script>
-    <footer>
-        <div class="area-footer">
-            <div class="area-img">
-                <img src="./img/logotipo.png" alt="Logotipo AniMar">
-            </div>
-            <p>&copy;Todos os direitos reservados</p>
-        </div>
-    </footer>
-</body>
 
+  <header>
+    <div class="area-header">
+      <div class="area-img">
+        <img src="./img/logotipo.png" alt="Logotipo AniMar">
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html">Adote um pet</a></li>
+          <li><a href="index.html">Ongs e serviços</a></li>
+          <li><a href="index.html">Proteção aos animais</a></li>
+          <li><a href="index.html">Cuidado com seu pet</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="barra-de-pesquisa">
+    <input type="text" id="caixa-de-pesquisa" placeholder="Pesquisar...">
+    <button id="botao-de-pesquisa">🔍</button>
+  </div>
+
+  <div id="resultados-pesquisa"></div>
+
+  <div id="mapa"></div>
+
+  <script src="js/script.js"></script>
+
+  <footer>
+    <div class="area-footer">
+      <div class="area-img">
+        <img src="./img/logotipo.png" alt="Logotipo AniMar">
+      </div>
+      <p>&copy; Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
