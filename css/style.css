@@ -134,5 +134,20 @@
         max-width: 80%;
         scroll-snap-align: start;
     }
+    .depoimento{
+        flex-direction: column;
+        height: 350px;
+        gap: 10px;
+    }
+    .conteudo-imagem .imagem-metade{
+        width: 150px;
+    }
+    .conteudo-texto{
+        width: 100%;
+    }
+    .conteudo-imagem .imagem-normal{
+        width: 320px;
+        height: 150px;
+    }
 }
 
