@@ -9,7 +9,7 @@
 }
 
 .container-lpa {
-  padding: 200px;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,11 @@
   flex-direction: column;
 }
 
-.container-titulo-lpa {
+.titulo-lpa {
+  padding: 50px;
 }
 
-.titulo-cards {
+.titulo-lpa h1 {
   text-align: center;
   font-size: 28px;
   font-weight: 500;
@@ -74,12 +75,27 @@
 .texto-lpa p {
   color: var(--cor-texto);
   text-align: center;
+  font-size: 18px;
 }
 
 .texto-lpa p a {
   color: var(--cor-secundaria);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .botao-lpa {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+.botao-lpa img {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.botao-lpa img:hover {
+  transform: scale(1.1);
 }
