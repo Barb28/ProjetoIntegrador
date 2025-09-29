@@ -63,6 +63,7 @@
   height: 80px;
   object-fit: cover;
   margin-right: 8px;
+  border-radius: 50px;
 }
 
 #resultados-pesquisa .ong-info h3 {
@@ -78,5 +79,16 @@
 #resultados-pesquisa .servicos i {
   margin-right: 5px;
   font-size: 16px;
-  color: #355092;
 }
+
+.servicos i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #3A8BD7;
+}
+
+/* .servicos .fa-house { color: #db3434; }   /* azul */
+/* .servicos .fa-syringe { color: #1100ff; } */
+/* .servicos .fa-hospital { color: #21c2ce; } */
+/* .fa-instagram { color: #79005a;} */
+/* .fa-phone { color: #27ae60; }  */

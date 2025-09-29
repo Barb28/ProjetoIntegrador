@@ -69,13 +69,19 @@ function buscarONG() {
       <div class="ong-info">
         <h3>${ong.nome}</h3>
         <p>${ong.endereco}</p>
-        <p><i class="fab fa-instagram"></i> @${ong.instagram}</p>
-        <p>${ong.numero}</p>
+        <p><i class="fab fa-instagram"></i>
+      <a href="https://instagram.com/${ong.instagram}" 
+         target="_blank" 
+         rel="noopener noreferrer">
+         @${ong.instagram}
+      </a>
+      </p>
+        <p><i class="fa-solid fa-phone"></i>${ong.numero}</p>
         <div class="servicos">
-          ${ong.servicos.includes("adocao") ? '<i class="fa-solid fa-heart"></i>' : ''}
-          ${ong.servicos.includes("lar") ? '<i class="fa-solid fa-house"></i>' : ''}
-          ${ong.servicos.includes("vacina") ? '<i class="fa-solid fa-syringe"></i>' : ''}
-          ${ong.servicos.includes("medico") ? '<i class="fa-solid fa-hospital"></i>' : ''}
+          ${ong.servicos.includes("adocao") ? '<i class="fa-solid fa-heart" title="Adoção"></i>' : ''}
+          ${ong.servicos.includes("lar") ? '<i class="fa-solid fa-house" title="Lar Temporário"></i>' : ''}
+          ${ong.servicos.includes("vacina") ? '<i class="fa-solid fa-syringe" title="Vacinas"></i>' : ''}
+          ${ong.servicos.includes("medico") ? '<i class="fa-solid fa-hospital" title="Serviços Veterinários"></i>' : ''}
         </div>
       </div>
     `;
