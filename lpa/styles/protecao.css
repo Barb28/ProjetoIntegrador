@@ -29,12 +29,16 @@
 }
 
 .card-informacao {
-  width: 1350px;
+  width: 100%;
+  max-width: 1350px;
+  /* min-height: 375px; */
   height: 375px;
+  margin-bottom: 30px;
   border: 5px solid var(--cor-primaria);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -43,7 +47,7 @@
 
 .container-img-lpa {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +56,9 @@
 
 .img-fundo {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  display: block; /*acrecentei*/
 }
 
 .conteudo-lpa {
@@ -68,7 +73,7 @@
 .subtitulo-lpa h2 {
   color: var(--cor-subtitulo);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -76,6 +81,7 @@
   color: var(--cor-texto);
   text-align: center;
   font-size: 18px;
+  font-weight: 500;
 }
 
 .texto-lpa p a {
@@ -86,7 +92,7 @@
 .botao-lpa {
   position: absolute;
   bottom: 30px;
-  right: 50px;
+  right: 30px;
 }
 
 .botao-lpa img {
