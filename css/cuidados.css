@@ -15,7 +15,7 @@ body {
     background:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4)),
         /* camada escura com opacidade */
-        url("img/gatoFofo.png");
+        url("../img/gatoFofo.png");
     background-repeat: no-repeat;
     /* impede que a imagem se repita */
     background-size: cover;
@@ -111,12 +111,15 @@ main {
 
 .dropdownCard {
     width: 95%;
-    background-color: #355092;
     border-radius: 14px;
 }
 
-.dropdownCard:hover {
+.dropDownAtivo {
     background-color: #3f7ccd;
+}
+
+.dropdownCard:hover {
+    background-color: aliceblue;
 }
 
 .dropdownCard h2 {
@@ -158,10 +161,10 @@ main {
     height: 100vh;
 } */
 
-#textoDireita p {
+/* #textoDireita p {
     margin: 0 auto;
     padding: 4vh;
-    /* margin-bottom: 1.6vh; */
+    margin-bottom: 1.6vh;
     line-height: 2.2vh;
     font-size: 2vh;
     width: 80%;
@@ -182,7 +185,7 @@ main {
     text-align-last: left;
     hyphens: none;
     color: #355092;
-}
+} */
 
 .conteudo-oculto {
     height: auto;
@@ -206,10 +209,9 @@ main {
 }
 
 .conteudo-oculto img {
-    width: 40%;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    background-color: chocolate;
 }
 
 .dicas {
@@ -223,13 +225,12 @@ main {
 }
 
 
+
 @media only screen and (max-width: 425px) {
 
     /*------------DROPDOWNCARDS-----------------*/
 
     .bannerInformativo h1 {
-        /* font-size: 36px;
-    grid-column: 1; */
         font-size: 2.8vh;
         color: #355092;
         text-align: center;
@@ -265,5 +266,42 @@ main {
         hyphens: none;
         color: #355092;
 
+    }
+
+    .conteudo-oculto {
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        text-align: left;
+        background-color: aliceblue;
+        color: #355092;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conteudo-oculto img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .dicas p {
+        font-size: 1.6vh;
+        text-align-last: center;
+        margin: auto;
+    }
+
+    .dicas strong {
+        font-size: 1.6vh;
+    }
+
+    .dicas li {
+        font-size: 1.6vh;
+        text-align-last: center;
+        letter-spacing: 0.1vw;
+        max-width: 80ch;
+        margin: auto;
     }
 }

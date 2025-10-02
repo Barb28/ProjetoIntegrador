@@ -9,11 +9,11 @@ cards.forEach(card => {
 
   // Clique no card
   card.addEventListener('click', () => {
-    if (card.classList.contains('ativo')) {
-      card.classList.remove('ativo');
+    if (card.classList.contains('dropDownAtivo')) {
+      card.classList.remove('dropDownAtivo');
       card.style.backgroundColor = corOriginal;
     } else {
-      card.classList.add('ativo');
+      card.classList.add('dropDownAtivo');
       card.style.backgroundColor = corAtivo;
     }
   });
@@ -22,7 +22,7 @@ cards.forEach(card => {
 // Opcional: manter cor original ao redimensionar a tela
 window.addEventListener('resize', () => {
   cards.forEach(card => {
-    if (!card.classList.contains('ativo')) {
+    if (!card.classList.contains('dropDownAtivo')) {
       card.style.backgroundColor = "#355092";
     }
   });
