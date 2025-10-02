@@ -9,6 +9,13 @@
     background-size: cover;
 }
 
+.banner .botao:hover {
+    transition: background-color 0.2s ease-in-out, transform 0.5s ease;
+    transform: translateY(-5px);
+    background-color:rgb(0, 164, 219);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .conteudo-banner {
     width: 100%;
     height: 100%;
@@ -18,6 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 15px;
 }
 
 .conteudo-secao {
@@ -45,28 +53,31 @@
 .card-image {
     width: 100%;
     height: 40%;
-    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
+#card1 {
+    background-image: url(../img/voluntarios.jpg);
+}
+
+#card2 {
+    background-image: url(../img/veterinario.jpg);
+}
+
+#card3 {
+    background-image: url(../img/cuidados.jpg);
+}
+
+#card4 {
+    background-image: url(../img/maus-tratos.png);
 }
 
 .conteudo-card {
     height: 60%;
     padding: 20px;
     text-align: center;
-}
-
-.botao {
-    border: none;
-    background-color: #355092;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    width: 170px;
 }
 
 .depoimento {
@@ -96,7 +107,7 @@
 .conteudo-imagem .imagem-metade {
     width: 200px;
     border-radius: 10px;
-    
+
 }
 
 .conteudo-imagem .imagem-normal {
@@ -111,43 +122,58 @@
     color: #333;
 }
 
-@media only screen and (max-width: 425px){
-    .banner{
+@media only screen and (max-width: 425px) {
+    .banner {
         height: 250px;
     }
 
-    .botao{
+    .conteudo-banner{
+        gap: 0;
+    }
+
+    .botao {
         width: 100px;
     }
 
     .conteudo-secao {
         /*para fazer a rolagem lateral*/
-        overflow-x: auto;                
-        scroll-snap-type: x mandatory;   
-        gap: 20px;                       
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
         padding: 10px 0;
     }
 
     .card-servico {
         /*para fazer a rolagem lateral*/
-        flex: 0 0 80%;                  
+        flex: 0 0 80%;
         max-width: 80%;
         scroll-snap-align: start;
     }
-    .depoimento{
+
+    .card-image {
+        height: 50%;
+    }
+
+    .conteudo-card {
+        height: 50%;
+    }
+
+    .depoimento {
         flex-direction: column;
         height: 350px;
         gap: 10px;
     }
-    .conteudo-imagem .imagem-metade{
+
+    .conteudo-imagem .imagem-metade {
         width: 150px;
     }
-    .conteudo-texto{
+
+    .conteudo-texto {
         width: 100%;
     }
-    .conteudo-imagem .imagem-normal{
+
+    .conteudo-imagem .imagem-normal {
         width: 320px;
         height: 150px;
     }
 }
-
