@@ -1,0 +1,99 @@
+#mapa {
+  height: calc(100vh - 100px);
+  width: 100%;
+  z-index: 0;
+}
+ 
+.barra-de-pesquisa {
+  position: fixed;
+  top: 12vh;
+  right: 20px;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 500;
+}
+ 
+.barra-de-pesquisa input {
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  background: #f2f2f2;
+  width: 220px;
+}
+ 
+.barra-de-pesquisa button {
+  background: #355092;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+#resultados-pesquisa {
+  position: fixed;
+  top: calc(12vh + 50px);
+  right: 20px;
+  background: #fff;
+  max-width: 320px;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 500;
+  font-size: 14px;
+  display: none;
+  color: #333;
+}
+ 
+#resultados-pesquisa .ong {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+ 
+#resultados-pesquisa .ong img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 8px;
+  border-radius: 50px;
+}
+ 
+#resultados-pesquisa .ong-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+ 
+#resultados-pesquisa .ong-info p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+ 
+#resultados-pesquisa .servicos i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+ 
+.servicos i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #3A8BD7;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+}
+@media only screen and (max-width: 425px){
+  #mapa{
+    height: 100vh;
+  }
+}
