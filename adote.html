@@ -1,217 +1,338 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AniMar - Adote um Pet</title>
     <link rel="stylesheet" href="./css/estiloGeral.css" />
     <link rel="stylesheet" href="./css/styleAdocao.css" />
 
-    <link rel="icon" type="image/png" href="./img/logotipo.png">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/png" href="./img/logotipo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <script src="./js/scriptAdocao.js" defer></script>
     <script src="./js/script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header>
-            <div class="area-header">
-                <div class="area-img">
-                    <img src="./img/logotipo.png" alt="Logotipo AniMar" />
-                </div>
-                <nav class="menu">
-                    <span class="material-symbols-outlined" id="sair">
-                        close
-                    </span>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="adote.html">Adote um pet</a></li>
-                        <li><a href="ongseservicos.html">Ongs e serviços</a></li>
-                        <li><a href="protecao.html">Proteção aos animais</a></li>
-                        <li><a href="cuidados.html">Cuidado com seu pet</a></li>
-                    </ul>
-                </nav>
-                <div class="menu-hamburguer">
-                    <span class="material-symbols-outlined" id="hamburguer">
-                        menu
-                    </span>
-                </div>
-            </div>
-        </header>
-
-        <div class="corpo">
-            <main class="conteudo-adocao">
-                <aside class="filtros">
-                    <h3>Filtrar por:</h3>
-                    <div class="grupo-filtro">
-                        <label for="especie">Espécie</label>
-                        <select id="especie" name="especie">
-                            <option value="">Todas</option>
-                            <option value="cachorro">Cachorro</option>
-                            <option value="gato">Gato</option>
-                        </select>
-                    </div>
-                    <div class="grupo-filtro">
-                        <label for="raca">Raça</label>
-                        <select id="raca" name="raca">
-                            <option value="">Todas</option>
-                            <option value="pinscher">Pinscher</option>
-                            <option value="bulldog">Bulldog</option>
-                            <option value="basenji">Basenji</option>
-                            <option value="siames">Siamês</option>
-                            <option value="persa">Persa</option>
-                            <option value="cairn-terrier">Cairn Terrier</option>
-                            <option value="vira-lata">Vira-lata</option>
-                        </select>
-                    </div>
-                    <div class="grupo-filtro">
-                        <label for="porte">Porte</label>
-                        <select id="porte" name="porte">
-                            <option value="">Todos</option>
-                            <option value="pequeno">Pequeno</option>
-                            <option value="medio">Médio</option>
-                            <option value="grande">Grande</option>
-                        </select>
-                    </div>
-                    <div class="grupo-filtro">
-                        <label for="sexo">Sexo</label>
-                        <select id="sexo" name="sexo">
-                            <option value="">Todos</option>
-                            <option value="macho">Macho</option>
-                            <option value="femea">Fêmea</option>
-                        </select>
-                    </div>
-                    <div class="grupo-filtro">
-                        <label for="ong">ONG's</label>
-                        <select id="ong" name="ong">
-                            <option value="">Todas</option>
-                            <option value="arca-de-noe">Arca de Noé</option>
-                            <option value="amigos-do-pelo">Amigos do Pelo</option>
-                        </select>
-                    </div>
-                    <button class="botao" id="btn-pesquisar">Pesquisar</button>
-                </aside>
-
-                <section class="galeria-pets">
-                    <h2 class="titulo-galeria">Disponíveis para adoção</h2>
-                    <div class="cards-container">
-                        <div class="pet-card" data-especie="cachorro" data-raca="pinscher" data-porte="pequeno" data-sexo="macho" data-ong="arca-de-noe">
-                            <img src="https://www.patasdacasa.com.br/sites/default/files/styles/article_detail_1200/public/noticias/2022/10/pinscher-e-um-cachorro-saudavel-veja-as-doencas-mais-comuns-que-podem-atingir-a-raca_0.jpg.webp?itok=S6QwGv49" alt="Foto do Pinscher">
-                            <div class="pet-info">
-                                <h3>Thor</h3>
-                                <p>Macho, Pequeno, Pinscher, ONG Arca de Noé.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="cachorro" data-raca="pinscher" data-porte="medio" data-sexo="femea" data-ong="arca-de-noe">
-                            <img src="https://www.patasdacasa.com.br/sites/default/files/2024-12/pinscher%20capa.jpg" alt="Foto do Bulldog">
-                            <div class="pet-info">
-                                <h3>Nina</h3>
-                                <p>Fêmea, Pequeno, Pinscher, ONG Arca de Noé.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="cachorro" data-raca="basenji" data-porte="medio" data-sexo="femea" data-ong="amigos-do-pelo">
-                            <img src="https://www.purina.pt/sites/default/files/styles/ttt_image_510/public/2024-01/sitesdefaultfilesstylessquare_medium_440x440public2022-08basenji.jpg?itok=4fK6_W00" alt="Foto do Basenji">
-                            <div class="pet-info">
-                                <h3>Mel</h3>
-                                <p>Fêmea, Médio, Basenji, ONG Amigos do Pelo.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="gato" data-raca="siames" data-porte="pequeno" data-sexo="macho" data-ong="arca-de-noe">
-                            <img src="https://www.agrosete.com.br/wp-content/uploads/2017/07/siames-1-800x600.jpg" alt="Foto do Siamês">
-                            <div class="pet-info">
-                                <h3>Simba</h3>
-                                <p>Macho, Pequeno, Siamês, ONG Arca de Noé.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="cachorro" data-raca="vira-lata" data-porte="medio" data-sexo="femea" data-ong="amigos-do-pelo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Serena_REFON.jpg" alt="Foto do Vira-lata">
-                            <div class="pet-info">
-                                <h3>Lua</h3>
-                                <p>Fêmea, Médio, Vira-lata, ONG Amigos do Pelo.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="cachorro" data-raca="cairn-terrier" data-porte="pequeno" data-sexo="femea" data-ong="arca-de-noe">
-                            <img src="https://www.purina.pt/sites/default/files/2021-02/BREED%20Hero_0031_Cairn_terrier.jpg" alt="Foto do Cairn Terrier">
-                            <div class="pet-info">
-                                <h3>Princesa</h3>
-                                <p>Fêmea, Pequeno, Cairn Terrier, ONG Arca de Noé.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="gato" data-raca="persa" data-porte="pequeno" data-sexo="femea" data-ong="amigos-do-pelo">
-                            <img src="https://www.correiobraziliense.com.br/aqui/wp-content/uploads/2025/06/persa_branco-1024x576.jpg" alt="Foto de um Gato Persa">
-                            <div class="pet-info">
-                                <h3>Fifi</h3>
-                                <p>Fêmea, Pequeno, Persa, ONG Amigos do Pelo.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="cachorro" data-raca="vira-lata" data-porte="grande" data-sexo="macho" data-ong="arca-de-noe">
-                            <img src="https://cdn6.campograndenews.com.br/uploads/noticias/2024/01/12/269031dbc8b515bf7f7c47a3bc2e892d8133e660.jpg" alt="Foto de Vira-latas">
-                            <div class="pet-info">
-                                <h3>Bob</h3>
-                                <p>Macho, Grande, Vira-lata, ONG Arca de Noé.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="gato" data-raca="Ragdoll" data-porte="medio" data-sexo="macho" data-ong="amigos-do-pelo">
-                            <img src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto de um Gato Vira-lata">
-                            <div class="pet-info">
-                                <h3>Tom</h3>
-                                <p>Macho, Pequeno, Ragdoll, ONG Amigos do Pelo.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div class="pet-card" data-especie="cachorro" data-raca="bulldog" data-porte="medio" data-sexo="macho" data-ong="amigos-do-pelo">
-                            <img src="https://breed-assets.wisdompanel.com/dog/bulldog-standard/Bulldog2.png" alt="Foto de um Bulldog">
-                            <div class="pet-info">
-                                <h3>Zeus</h3>
-                                <p>Macho, Médio, Bulldog, ONG Amigos do Pelo.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                         <div class="pet-card" data-especie="gato" data-raca="siames" data-porte="pequeno" data-sexo="femea" data-ong="arca-de-noe">
-                            <img src="https://images.pexels.com/photos/596590/pexels-photo-596590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto de um Gato Siamês">
-                            <div class="pet-info">
-                                <h3>Mia</h3>
-                                <p>Fêmea, Pequeno, Siamês, ONG Arca de Noé.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                         <div class="pet-card" data-especie="cachorro" data-raca="vira-lata" data-porte="pequeno" data-sexo="femea" data-ong="amigos-do-pelo">
-                            <img src="https://pequenopet.com.br/wp-content/uploads/2018/06/Cachorro-Vira-Lata-Sem-Raca-Definida-SRD-1.jpg" alt="Foto de um cachorro Vira-lata">
-                            <div class="pet-info">
-                                <h3>Belinha</h3>
-                                <p>Fêmea, Pequeno, Vira-lata, ONG Amigos do Pelo.</p>
-                                <button class="botao">Vou Adotar</button>
-                            </div>
-                        </div>
-                        <div id="nenhum-animal-encontrado" class="mensagem-vazio">
-                           <h3>Nenhum resultado encontrado</h3>
-                           <p>No momento, não disponibilizamos de um animal com as características que você procura. Tente alterar os filtros.</p>
-                    </div>
-                    </div>
-                </section>
-            </main>
+      <header>
+        <div class="area-header">
+          <div class="area-img">
+            <img src="./img/logotipo.png" alt="Logotipo AniMar" />
+          </div>
+          <nav class="menu">
+            <span class="material-symbols-outlined" id="sair"> close </span>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="adote.html">Adote um Pet</a></li>
+              <li><a href="ongseservicos.html">Ongs e Serviços</a></li>
+              <li><a href="protecao.html">Proteção aos Animais</a></li>
+              <li><a href="cuidados.html">Cuidados com Seu Pet</a></li>
+            </ul>
+          </nav>
+          <div class="menu-hamburguer">
+            <span class="material-symbols-outlined" id="hamburguer">
+              menu
+            </span>
+          </div>
         </div>
+      </header>
 
-        <footer>
-            <div class="area-footer">
-                <div class="area-img">
-                    <img src="./img/logotipo.png" alt="Logotipo AniMar" />
-                </div>
-                <p>&copy;Todos os direitos reservados</p>
+      <div class="corpo">
+        <main class="conteudo-adocao">
+          <aside class="filtros">
+            <h3>Filtrar por:</h3>
+            <div class="grupo-filtro">
+              <label for="especie">Espécie</label>
+              <select id="especie" name="especie">
+                <option value="">Todas</option>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+              </select>
             </div>
-        </footer>
+            <div class="grupo-filtro">
+              <label for="raca">Raça</label>
+              <select id="raca" name="raca">
+                <option value="">Todas</option>
+                <option value="pinscher">Pinscher</option>
+                <option value="bulldog">Bulldog</option>
+                <option value="basenji">Basenji</option>
+                <option value="siames">Siamês</option>
+                <option value="persa">Persa</option>
+                <option value="cairn-terrier">Cairn Terrier</option>
+                <option value="vira-lata">Vira-lata</option>
+              </select>
+            </div>
+            <div class="grupo-filtro">
+              <label for="porte">Porte</label>
+              <select id="porte" name="porte">
+                <option value="">Todos</option>
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <div class="grupo-filtro">
+              <label for="sexo">Sexo</label>
+              <select id="sexo" name="sexo">
+                <option value="">Todos</option>
+                <option value="macho">Macho</option>
+                <option value="femea">Fêmea</option>
+              </select>
+            </div>
+            <div class="grupo-filtro">
+              <label for="ong">ONG's</label>
+              <select id="ong" name="ong">
+                <option value="">Todas</option>
+                <option value="arca-de-noe">Arca de Noé</option>
+                <option value="amigos-do-pelo">Amigos do Pelo</option>
+              </select>
+            </div>
+            <button class="botao" id="btn-pesquisar">Pesquisar</button>
+          </aside>
+
+          <section class="galeria-pets">
+            <h2 class="titulo-galeria">Disponíveis para adoção</h2>
+            <div class="cards-container">
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="pinscher"
+                data-porte="pequeno"
+                data-sexo="macho"
+                data-ong="arca-de-noe"
+              >
+                <img
+                  src="https://www.patasdacasa.com.br/sites/default/files/styles/article_detail_1200/public/noticias/2022/10/pinscher-e-um-cachorro-saudavel-veja-as-doencas-mais-comuns-que-podem-atingir-a-raca_0.jpg.webp?itok=S6QwGv49"
+                  alt="Foto do Pinscher"
+                />
+                <div class="pet-info">
+                  <h3>Thor</h3>
+                  <p>Macho, Pequeno, Pinscher, ONG Arca de Noé.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="pinscher"
+                data-porte="medio"
+                data-sexo="femea"
+                data-ong="arca-de-noe"
+              >
+                <img
+                  src="https://www.patasdacasa.com.br/sites/default/files/2024-12/pinscher%20capa.jpg"
+                  alt="Foto do Bulldog"
+                />
+                <div class="pet-info">
+                  <h3>Nina</h3>
+                  <p>Fêmea, Pequeno, Pinscher, ONG Arca de Noé.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="basenji"
+                data-porte="medio"
+                data-sexo="femea"
+                data-ong="amigos-do-pelo"
+              >
+                <img
+                  src="https://www.purina.pt/sites/default/files/styles/ttt_image_510/public/2024-01/sitesdefaultfilesstylessquare_medium_440x440public2022-08basenji.jpg?itok=4fK6_W00"
+                  alt="Foto do Basenji"
+                />
+                <div class="pet-info">
+                  <h3>Mel</h3>
+                  <p>Fêmea, Médio, Basenji, ONG Amigos do Pelo.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="gato"
+                data-raca="siames"
+                data-porte="pequeno"
+                data-sexo="macho"
+                data-ong="arca-de-noe"
+              >
+                <img
+                  src="https://www.agrosete.com.br/wp-content/uploads/2017/07/siames-1-800x600.jpg"
+                  alt="Foto do Siamês"
+                />
+                <div class="pet-info">
+                  <h3>Simba</h3>
+                  <p>Macho, Pequeno, Siamês, ONG Arca de Noé.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="vira-lata"
+                data-porte="medio"
+                data-sexo="femea"
+                data-ong="amigos-do-pelo"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/70/Serena_REFON.jpg"
+                  alt="Foto do Vira-lata"
+                />
+                <div class="pet-info">
+                  <h3>Lua</h3>
+                  <p>Fêmea, Médio, Vira-lata, ONG Amigos do Pelo.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="cairn-terrier"
+                data-porte="pequeno"
+                data-sexo="femea"
+                data-ong="arca-de-noe"
+              >
+                <img
+                  src="https://www.purina.pt/sites/default/files/2021-02/BREED%20Hero_0031_Cairn_terrier.jpg"
+                  alt="Foto do Cairn Terrier"
+                />
+                <div class="pet-info">
+                  <h3>Princesa</h3>
+                  <p>Fêmea, Pequeno, Cairn Terrier, ONG Arca de Noé.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="gato"
+                data-raca="persa"
+                data-porte="pequeno"
+                data-sexo="femea"
+                data-ong="amigos-do-pelo"
+              >
+                <img
+                  src="https://www.correiobraziliense.com.br/aqui/wp-content/uploads/2025/06/persa_branco-1024x576.jpg"
+                  alt="Foto de um Gato Persa"
+                />
+                <div class="pet-info">
+                  <h3>Fifi</h3>
+                  <p>Fêmea, Pequeno, Persa, ONG Amigos do Pelo.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="vira-lata"
+                data-porte="grande"
+                data-sexo="macho"
+                data-ong="arca-de-noe"
+              >
+                <img
+                  src="https://cdn6.campograndenews.com.br/uploads/noticias/2024/01/12/269031dbc8b515bf7f7c47a3bc2e892d8133e660.jpg"
+                  alt="Foto de Vira-latas"
+                />
+                <div class="pet-info">
+                  <h3>Bob</h3>
+                  <p>Macho, Grande, Vira-lata, ONG Arca de Noé.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="gato"
+                data-raca="Ragdoll"
+                data-porte="medio"
+                data-sexo="macho"
+                data-ong="amigos-do-pelo"
+              >
+                <img
+                  src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Foto de um Gato Vira-lata"
+                />
+                <div class="pet-info">
+                  <h3>Tom</h3>
+                  <p>Macho, Pequeno, Ragdoll, ONG Amigos do Pelo.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="bulldog"
+                data-porte="medio"
+                data-sexo="macho"
+                data-ong="amigos-do-pelo"
+              >
+                <img
+                  src="https://breed-assets.wisdompanel.com/dog/bulldog-standard/Bulldog2.png"
+                  alt="Foto de um Bulldog"
+                />
+                <div class="pet-info">
+                  <h3>Zeus</h3>
+                  <p>Macho, Médio, Bulldog, ONG Amigos do Pelo.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="gato"
+                data-raca="siames"
+                data-porte="pequeno"
+                data-sexo="femea"
+                data-ong="arca-de-noe"
+              >
+                <img
+                  src="https://images.pexels.com/photos/596590/pexels-photo-596590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Foto de um Gato Siamês"
+                />
+                <div class="pet-info">
+                  <h3>Mia</h3>
+                  <p>Fêmea, Pequeno, Siamês, ONG Arca de Noé.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div
+                class="pet-card"
+                data-especie="cachorro"
+                data-raca="vira-lata"
+                data-porte="pequeno"
+                data-sexo="femea"
+                data-ong="amigos-do-pelo"
+              >
+                <img
+                  src="https://pequenopet.com.br/wp-content/uploads/2018/06/Cachorro-Vira-Lata-Sem-Raca-Definida-SRD-1.jpg"
+                  alt="Foto de um cachorro Vira-lata"
+                />
+                <div class="pet-info">
+                  <h3>Belinha</h3>
+                  <p>Fêmea, Pequeno, Vira-lata, ONG Amigos do Pelo.</p>
+                  <button class="botao">Vou Adotar</button>
+                </div>
+              </div>
+              <div id="nenhum-animal-encontrado" class="mensagem-vazio">
+                <h3>Nenhum resultado encontrado</h3>
+                <p>
+                  No momento, não disponibilizamos de um animal com as
+                  características que você procura. Tente alterar os filtros.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <div class="area-footer">
+          <div class="area-img">
+            <img src="./img/logotipo.png" alt="Logotipo AniMar" />
+          </div>
+          <p>&copy;Todos os direitos reservados</p>
+        </div>
+      </footer>
     </div>
-    
-</body>
+  </body>
 </html>
